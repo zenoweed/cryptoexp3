@@ -1,3 +1,7 @@
+# code taken from gfg
+# (https://www.geeksforgeeks.org/hill-cipher/)
+# and modified to take more then 3 characters
+
 # Python3 code to implement Hill Cipher
 
 keyMatrix = [[0] * 3 for i in range(3)]
@@ -47,22 +51,17 @@ def HillCipher(message, key):
 		CipherText.append(chr(cipherMatrix[i][0] + 65))
 
 	# Finally print the ciphertext
-	print("Ciphertext: ", "".join(CipherText))
+	print("".join(CipherText),end="")
 
 # Driver Code
-def main():
 
-	# Get the message to
-	# be encrypted
-	message = "ACT"
+z=0
+# Get the message to
+# be encrypted
+message=["ACT","TOT","BOT"]
 
-	# Get the key
-	key = "GYBNQKURP"
-
-	HillCipher(message, key)
-
-if __name__ == "__main__":
-	main()
-
-# This code is contributed
-# by Pratik Somwanshi
+# Get the key
+key = "GYBNQKURP"
+for z in range(len(message)):
+  HillCipher(message[z], key)
+	
