@@ -59,9 +59,13 @@ z=0
 # Get the message to
 # be encrypted
 message=["ACT","TOT","BOT"]
+print("\nPlainText:",end="")
 
+for z in range(len(message)):
+  print(message[z],end="")
 # Get the key
 key = "GYBNQKURP"
+print("\nCiphertext:",end="")
 for z in range(len(message)):
   HillCipher(message[z], key)
 	
